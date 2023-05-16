@@ -1,8 +1,8 @@
 import { assertExists, assertEquals } from "https://deno.land/std@0.187.0/testing/asserts.ts";
-import RegistarUsuario from "../src/RegistrarUsuario.ts";
-import BancoEmMemoria from "../src/BancoEmMemoria.ts";
-import InverterSenha from "../src/InverterSenha.ts";
-import SenhaComEspaco from "../src/SenhaComEspaco.ts";
+import RegistarUsuario from "../src/exemplo/app/usuario/RegistrarUsuario.ts";
+import BancoEmMemoria from "../src/exemplo/adaptadores/db/BancoEmMemoria.ts";
+import InverterSenha from "../src/exemplo/adaptadores/auth/InverterSenha.ts";
+import SenhaComEspaco from "../src/exemplo/adaptadores/auth/SenhaComEspaco.ts";
 
 Deno.test("Deve registrar um usuário invertendo a senha", () => {
     const colecao = new BancoEmMemoria()

@@ -1,4 +1,4 @@
-import Colecao from "./Colecao.ts";
+import Colecao from "../../app/portas/Colecao.ts";
 
 export default class BancoEmMemoria implements Colecao {
     // deno-lint-ignore no-explicit-any

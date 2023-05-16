@@ -1,5 +1,5 @@
-import Colecao from "./Colecao.ts";
-import ProvedorCriptografia from "./ProvedorCriptografia.ts";
+import Colecao from "../portas/Colecao.ts";
+import ProvedorCriptografia from "../portas/ProvedorCriptografia.ts";
 export default class RegistarUsuario {
 
     constructor(
