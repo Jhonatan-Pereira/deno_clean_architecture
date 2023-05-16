@@ -35,5 +35,5 @@ Deno.test("Deve registrar um usuário com senha criptografada", () => {
 
     assertExists(usuario.id)
     assertEquals(usuario.nome, 'João da silva');
-    assert(provedorCripto.comparar('12345', usuario.senha));
+    assert(provedorCripto.comparar('12345', usuario.senha!));
 });

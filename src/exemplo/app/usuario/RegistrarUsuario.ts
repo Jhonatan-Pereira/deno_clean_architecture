@@ -1,5 +1,6 @@
 import Colecao from "../portas/Colecao.ts";
 import ProvedorCriptografia from "../portas/ProvedorCriptografia.ts";
+import Usuario from "./Usuario.ts";
 export default class RegistarUsuario {
 
     constructor(
@@ -7,10 +8,10 @@ export default class RegistarUsuario {
         private provedorCripto: ProvedorCriptografia,
     ) {}
 
-    executar(nome: string, email: string, senha: string) {
+    executar(nome: string, email: string, senha: string): Usuario {
         const senhaCripto = this.provedorCripto.criptografar(senha)
-        const usuario = {
-            id: Math.random(), nome, email, senha: senhaCripto
+        const usuario: Usuario = {
+            id: `${Math.random()}`, nome, email, senha: senhaCripto
         }
 
         this.colecao.inserir(usuario)
