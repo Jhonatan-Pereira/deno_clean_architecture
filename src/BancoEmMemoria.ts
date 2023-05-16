@@ -1,4 +1,6 @@
-export default class BancoEmMemoria {
+import Colecao from "./Colecao.ts";
+
+export default class BancoEmMemoria implements Colecao {
     // deno-lint-ignore no-explicit-any
     private static items: any[] = []
 
