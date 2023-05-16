@@ -1,14 +1,18 @@
+import BancoEmMemoria from "./BancoEmMemoria.ts"
+import InverterSenha from "./InverterSenha.ts";
+
 export default class RegistarUsuario {
 
-    // deno-lint-ignore no-explicit-any
-    usuarios: any[] = []
+    private banco = new BancoEmMemoria()
+    private inverterSenha = new InverterSenha()
 
     executar(nome: string, email: string, senha: string) {
-        const senhaCripto = senha.split('').reverse().join('')
+        const senhaCripto = this.inverterSenha.criptografar(senha)
         const usuario = {
             id: Math.random(), nome, email, senha: senhaCripto
         }
-        this.usuarios.push(usuario)
+
+        this.banco.inserir(usuario)
         return usuario
     }
 }
