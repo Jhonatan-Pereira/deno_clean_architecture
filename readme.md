@@ -5,13 +5,13 @@
 
 # Run Project
 ```sh
-deno task dev
+deno task dev --unstable --allow-read --allow-env
 ```
 
 # Run Test
 ```sh
 # Run all tests
-deno test --watch
+deno test --watch --unstable --allow-read --allow-env
 
 # Run specefic test
 deno test tests/calc_test.ts
@@ -24,4 +24,11 @@ deno test --parallel
 ```sh
 npm i -D jest ts-jest @types/jest @types/node ts-node-dev
 npx rs-jest config:init
+npm i knex pg
+npm i -D dotenv
+npm i uuid
+npm i -D @types/uuid
 ```
+
+# Links
+- [Manual Deno KV](https://deno.com/manual@v1.34.0/runtime/kv)
