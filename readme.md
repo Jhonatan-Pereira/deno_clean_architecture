@@ -20,16 +20,7 @@ deno test tests/calc_test.ts
 deno test --parallel
 ```
 
-# Commands Node.js
-```sh
-npm i -D jest ts-jest @types/jest @types/node ts-node-dev
-npx rs-jest config:init
-npm i knex pg
-npm i -D dotenv
-npm i uuid
-npm i -D @types/uuid
-```
-
 # Links
-- [Manual Deno KV](https://deno.com/manual@v1.34.0/runtime/kv)
+- [Deno KV](https://deno.com/manual@v1.34.0/runtime/kv)
 - [Deno testing](https://deno.com/manual@v1.34.0/basics/testing)
+- [Deno faker](https://github.com/jackfiszr/deno-faker)

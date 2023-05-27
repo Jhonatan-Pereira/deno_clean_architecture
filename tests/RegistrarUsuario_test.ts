@@ -4,7 +4,7 @@ import InverterSenha from "../src/exemplo/adaptadores/auth/InverterSenha.ts";
 import SenhaComEspaco from "../src/exemplo/adaptadores/auth/SenhaComEspaco.ts";
 import CriptoReal from "../src/exemplo/adaptadores/auth/CriptoReal.ts";
 import UsuarioEmMemoria from "../src/exemplo/adaptadores/db/UsuarioEmMemoria.ts";
-import ColecaoUsuarioDB from "../src/exemplo/adaptadores/db/kv/kv.ts";
+import ColecaoUsuarioDB from "../src/exemplo/adaptadores/db/kv.ts";
 import { faker } from "https://deno.land/x/deno_faker@v1.0.3/mod.ts";
 
 Deno.test("Deve registrar um usuário invertendo a senha", async () => {
