@@ -1,6 +1,6 @@
 import "https://deno.land/x/dotenv@v3.2.2/load.ts";
-import Usuario from "../../app/usuario/Usuario.ts";
-import ColecaoUsuario from "../../app/usuario/ColecaoUsuario.ts";
+import Usuario from "../../core/usuario/Usuario.ts";
+import ColecaoUsuario from "../../core/usuario/ColecaoUsuario.ts";
 
 export default class ColecaoUsuarioDB implements ColecaoUsuario {
     async inserir(usuario: Usuario) {

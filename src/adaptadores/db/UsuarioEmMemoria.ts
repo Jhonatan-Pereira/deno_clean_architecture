@@ -1,5 +1,5 @@
-import ColecaoUsuario from "../../app/usuario/ColecaoUsuario.ts";
-import Usuario from "../../app/usuario/Usuario.ts";
+import ColecaoUsuario from "../../core/usuario/ColecaoUsuario.ts";
+import Usuario from "../../core/usuario/Usuario.ts";
 
 export default class UsuarioEmMemoria implements ColecaoUsuario {
     private items: Usuario[] = []

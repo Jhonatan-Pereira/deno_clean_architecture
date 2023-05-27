@@ -1,5 +1,5 @@
 import * as bcrypt from 'https://deno.land/x/bcrypt@v0.4.1/mod.ts'
-import ProvedorCriptografia from "../../app/usuario/ProvedorCriptografia.ts";
+import ProvedorCriptografia from "../../core/usuario/ProvedorCriptografia.ts";
 
 export default class CriptoReal implements ProvedorCriptografia {
     criptografar(senha: string): string {

@@ -1,11 +1,11 @@
 import { assertExists, assertEquals, assert, assertRejects } from "https://deno.land/std@0.187.0/testing/asserts.ts";
-import RegistarUsuario from "../src/exemplo/app/usuario/RegistrarUsuario.ts";
-import InverterSenha from "../src/exemplo/adaptadores/auth/InverterSenha.ts";
-import SenhaComEspaco from "../src/exemplo/adaptadores/auth/SenhaComEspaco.ts";
-import CriptoReal from "../src/exemplo/adaptadores/auth/CriptoReal.ts";
-import UsuarioEmMemoria from "../src/exemplo/adaptadores/db/UsuarioEmMemoria.ts";
-import ColecaoUsuarioDB from "../src/exemplo/adaptadores/db/kv.ts";
 import { faker } from "https://deno.land/x/deno_faker@v1.0.3/mod.ts";
+import UsuarioEmMemoria from "../src/adaptadores/db/UsuarioEmMemoria.ts";
+import RegistarUsuario from "../src/core/usuario/RegistrarUsuario.ts";
+import SenhaComEspaco from "../src/adaptadores/auth/SenhaComEspaco.ts";
+import CriptoReal from "../src/adaptadores/auth/CriptoReal.ts";
+import InverterSenha from "../src/adaptadores/auth/InverterSenha.ts";
+import ColecaoUsuarioDB from "../src/adaptadores/db/kv.ts";
 
 Deno.test("Deve registrar um usuário invertendo a senha", async () => {
     const colecao = new UsuarioEmMemoria()
