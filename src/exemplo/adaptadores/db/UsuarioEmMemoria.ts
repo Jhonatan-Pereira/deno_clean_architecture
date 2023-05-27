@@ -2,10 +2,15 @@ import ColecaoUsuario from "../../app/usuario/ColecaoUsuario.ts";
 import Usuario from "../../app/usuario/Usuario.ts";
 
 export default class UsuarioEmMemoria implements ColecaoUsuario {
-    private static items: Usuario[] = []
+    private items: Usuario[] = []
 
     // deno-lint-ignore require-await
     async inserir(item: Usuario): Promise<void> {
-        UsuarioEmMemoria.items.push(item)
+        this.items.push(item)
+    }
+
+    buscarPorEmail(email: string): Promise<Usuario|null> {
+        const usuario = this.items.find(item => item.email === email)
+        return Promise.resolve(usuario || null)
     }
 }

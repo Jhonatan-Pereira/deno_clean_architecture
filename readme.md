@@ -32,3 +32,4 @@ npm i -D @types/uuid
 
 # Links
 - [Manual Deno KV](https://deno.com/manual@v1.34.0/runtime/kv)
+- [Deno testing](https://deno.com/manual@v1.34.0/basics/testing)
